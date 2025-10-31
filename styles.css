@@ -1,2 +1,110 @@
 
 /* Your CSS Code here. */
+:root {
+  --bg: #0f1720;
+  --accent: #f59e0b;
+  --text: #e6eef6;
+  --muted: #9ca3af;
+  --card: rgba(255, 255, 255, 0.02);
+  --maxw: 900px;
+}
+
+/* Basic Layout */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #061122 0%, #071426 60%);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--maxw);
+  background: var(--card);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.6);
+}
+
+/* Header and Navbar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+nav a:hover {
+  background-color: rgba(245, 158, 11, 0.1);
+}
+
+/* Main Layout */
+main {
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  gap: 20px;
+}
+
+.content section {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.content h2 {
+  color: var(--accent);
+  margin-top: 0;
+}
+
+aside {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 16px;
+  color: var(--muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  aside {
+    order: 99;
+  }
+}
